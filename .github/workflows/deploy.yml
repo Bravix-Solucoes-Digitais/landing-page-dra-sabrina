@@ -32,4 +32,4 @@ jobs:
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASS }}
           local-dir: ./dist/
-          server-dir: /domains/bravixsolucoesdigitais.com.br/public_html/sabrina/
+          server-dir: /public_html/sabrina/
