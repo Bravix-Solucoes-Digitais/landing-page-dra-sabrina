@@ -11,13 +11,20 @@ import Footer from './components/Footer'
 
 import './App.css'
 
+/* ── Separador ornamental dourado ── */
+const GoldDivider = () => (
+  <div className="gold-divider" aria-hidden="true">
+    <span className="gold-divider-icon">✦</span>
+  </div>
+);
+
 function App() {
   useEffect(() => {
-    // Scroll Reveal anims
+    // Scroll Reveal — IntersectionObserver
     const observerOptions = {
       root: null,
       rootMargin: '0px',
-      threshold: 0.15
+      threshold: 0.12
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -28,35 +35,58 @@ function App() {
       });
     }, observerOptions);
 
-    // Selecionar todos os itens que queremos animar e adicionar a classe base
     const elementsToAnimate = document.querySelectorAll(
-      '.section-title, .service-card, .benefit-card, .case-card, .testimonial-card, .faq-item, .about-content'
+      '.hero-title, .hero-description, .hero-form-wrap, .section-title, .service-card, .benefit-card, .case-card, .testimonial-card, .faq-item, .about-content'
     );
 
     elementsToAnimate.forEach((el, index) => {
-      // Para não piscar na inicialização, só adicionamos reveal se estiver rodando o script
       el.classList.add('reveal');
-      
-      // Delay escalonado para cartões se eles estiverem na mesma linha
       if (el.className.includes('card') || el.className.includes('item')) {
-        el.style.transitionDelay = `${(index % 3) * 0.15}s`;
+        el.style.transitionDelay = `${(index % 3) * 0.1}s`;
       }
-      
       observer.observe(el);
     });
 
-    return () => observer.disconnect();
+    // Segurança: Força a exibição após 2.5s caso algo trave
+    const safetyTimeout = setTimeout(() => {
+      elementsToAnimate.forEach(el => el.classList.add('active'));
+    }, 2500);
+
+    return () => {
+      observer.disconnect();
+      clearTimeout(safetyTimeout);
+    };
   }, []);
 
   return (
     <div className="app-container">
+      {/* Hero — fundo escuro principal */}
       <Hero />
+
+      {/* Serviços — fundo vinho escuro (bg-alt) */}
+      <GoldDivider />
       <Services />
+
+      {/* Benefícios — fundo principal */}
+      <GoldDivider />
       <Benefits />
+
+      {/* Cases — fundo vinho escuro */}
+      <GoldDivider />
       <SuccessCases />
+
+      {/* Depoimentos — fundo alt */}
+      <GoldDivider />
       <Testimonials />
+
+      {/* Sobre */}
+      <GoldDivider />
       <About />
+
+      {/* FAQ — fundo principal */}
+      <GoldDivider />
       <FAQ />
+
       <Footer />
     </div>
   )

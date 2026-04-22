@@ -1,68 +1,168 @@
 .footer {
   background-color: var(--bg-main);
-  padding: 3rem 0;
-  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  border-top: 1px solid rgba(195, 163, 95, 0.15);
+  padding: 4rem 0 0;
 }
 
-.footer-content {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+/* ── Grid 3 colunas ───────────────── */
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 3rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
+/* ── Marca ────────────────────────── */
 .footer-logo {
   display: flex;
   align-items: center;
-  gap: 1rem;
+  gap: 0.85rem;
+  margin-bottom: 1.1rem;
 }
 
 .logo-icon {
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--primary-gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-family: var(--font-serif);
-  font-size: 2.5rem;
+  font-size: 1.1rem;
   color: var(--primary-gold);
-  line-height: 1;
+  flex-shrink: 0;
 }
 
 .logo-text h4 {
   font-family: var(--font-serif);
-  color: var(--text-main);
-  font-size: 1.2rem;
+  font-size: 0.85rem;
   letter-spacing: 2px;
-  line-height: 1;
-  margin-bottom: 0.2rem;
+  color: var(--text-main);
+  margin-bottom: 0.15rem;
 }
 
 .logo-sub {
-  font-size: 0.7rem;
-  color: var(--text-muted);
-  letter-spacing: 3px;
+  font-size: 0.6rem;
+  color: var(--primary-gold);
+  opacity: 0.6;
+  letter-spacing: 2px;
   text-transform: uppercase;
 }
 
+.footer-tagline {
+  font-size: 0.82rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+  max-width: 240px;
+}
+
+/* ── Títulos de coluna ────────────── */
+.footer-col-title {
+  font-family: var(--font-serif);
+  font-size: 0.7rem;
+  letter-spacing: 3px;
+  color: var(--primary-gold);
+  margin-bottom: 1rem;
+  opacity: 0.8;
+}
+
+/* ── Info list ────────────────────── */
+.footer-info-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.footer-info-list li {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+}
+
+/* ── Redes Sociais ────────────────── */
 .footer-socials {
   display: flex;
-  gap: 1.5rem;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
 }
 
 .social-link {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.82rem;
   color: var(--text-muted);
   transition: color 0.3s ease;
-  background-color: rgba(255,255,255,0.05);
-  padding: 0.8rem;
-  border-radius: 50%;
-  display: flex;
-  border: 1px solid rgba(255,255,255,0.05);
 }
 
-.social-link:hover {
+.social-link:hover { color: var(--primary-gold); }
+
+.social-link svg {
   color: var(--primary-gold);
-  border-color: var(--primary-gold);
+  opacity: 0.7;
+  flex-shrink: 0;
+  transition: opacity 0.3s ease;
+}
+
+.social-link:hover svg { opacity: 1; }
+
+/* ── Links Legais ─────────────────── */
+.footer-legal {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  flex-wrap: wrap;
+}
+
+.footer-legal a {
+  font-size: 0.72rem;
+  color: rgba(168, 158, 149, 0.5);
+  text-decoration: underline;
+  text-decoration-color: transparent;
+  transition: color 0.3s ease, text-decoration-color 0.3s ease;
+}
+
+.footer-legal a:hover {
+  color: var(--primary-gold);
+  text-decoration-color: var(--primary-gold);
+}
+
+.footer-legal span {
+  font-size: 0.72rem;
+  color: rgba(168, 158, 149, 0.3);
+}
+
+/* ── Rodapé ───────────────────────── */
+.footer-bottom {
+  padding: 1.25rem 0;
+  text-align: center;
+}
+
+.footer-bottom p {
+  font-size: 0.72rem;
+  color: rgba(168, 158, 149, 0.4);
+  letter-spacing: 0.5px;
+  font-family: var(--font-sans);
+}
+
+/* ── Responsivo ───────────────────── */
+@media (max-width: 900px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  .footer-col-brand { grid-column: 1 / -1; }
 }
 
 @media (max-width: 600px) {
-  .footer-content {
-    flex-direction: column;
+  .footer-grid {
+    grid-template-columns: 1fr;
     gap: 2rem;
-    text-align: center;
   }
+  .footer-col-brand { grid-column: auto; }
+  .footer-tagline { max-width: 100%; }
 }
