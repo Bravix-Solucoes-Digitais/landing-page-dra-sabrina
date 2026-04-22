@@ -33,4 +33,3 @@ jobs:
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./dist/
           server-dir: /domains/bravixsolucoesdigitais.com.br/public_html/sabrina/
-          delete-destination: false # Mude para true se quiser limpar a pasta antes de cada deploy
