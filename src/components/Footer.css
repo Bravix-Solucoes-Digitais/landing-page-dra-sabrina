@@ -44,11 +44,12 @@
 }
 
 .logo-sub {
-  font-size: 0.6rem;
+  font-family: var(--font-serif);
+  font-size: 0.65rem;
   color: var(--primary-gold);
-  opacity: 0.6;
-  letter-spacing: 2px;
+  letter-spacing: 3px;
   text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(195, 163, 95, 0.3);
 }
 
 .footer-tagline {
@@ -61,11 +62,12 @@
 /* ── Títulos de coluna ────────────── */
 .footer-col-title {
   font-family: var(--font-serif);
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   letter-spacing: 3px;
   color: var(--primary-gold);
-  margin-bottom: 1rem;
-  opacity: 0.8;
+  margin-bottom: 1.5rem;
+  text-transform: uppercase;
+  text-shadow: 0 0 10px rgba(195, 163, 95, 0.3);
 }
 
 /* ── Info list ────────────────────── */
@@ -83,12 +85,14 @@
 }
 
 .footer-info-list-item-title {
-  font-size: 0.7rem;
+  font-family: var(--font-serif);
+  font-size: 0.75rem;
   letter-spacing: 3px;
-  color: var(--primary-gold) !important;
+  color: var(--primary-gold);
   text-transform: uppercase;
-  margin-top: 1.5rem;
-  margin-bottom: 0.5rem;
+  margin-top: 2rem;
+  margin-bottom: 0.8rem;
+  text-shadow: 0 0 10px rgba(195, 163, 95, 0.3);
 }
 
 /* ── Redes Sociais ────────────────── */
