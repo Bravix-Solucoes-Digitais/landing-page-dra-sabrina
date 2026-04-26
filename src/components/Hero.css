@@ -34,7 +34,8 @@
 }
 
 .hero-content { 
-  max-width: 520px; 
+  max-width: 520px;
+  position: relative;
 }
 
 /* ── Eyebrow ──────────────────────── */
@@ -244,6 +245,26 @@
     background-position: right center;
     background-repeat: no-repeat;
   }
+  /* Sombra em degradê atrás da headline, da margem esquerda para a direita */
+  .hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 88%;
+    height: 100%;
+    background: linear-gradient(
+      to right,
+      rgba(10, 7, 8, 0.95) 0%,
+      rgba(10, 7, 8, 0.80) 25%,
+      rgba(10, 7, 8, 0.50) 55%,
+      rgba(10, 7, 8, 0.15) 80%,
+      rgba(10, 7, 8, 0.0) 100%
+    );
+    z-index: 1;
+    pointer-events: none;
+  }
+
   .hero-title {
     filter: drop-shadow(0px 4px 15px rgba(0, 0, 0, 0.7)) drop-shadow(0px 0px 30px rgba(0, 0, 0, 0.5));
   }
