@@ -1,4 +1,5 @@
-import React from 'react'; // Terceira tentativa de trigger do deploy
+import React from 'react';
+import { ArrowRight } from 'lucide-react';
 import './About.css';
 
 const About = () => {
@@ -14,11 +15,13 @@ const About = () => {
           <div className="about-text-content">
             <h3 className="about-name text-gold mb-2">DRA. SABRINA ALMEIDA</h3>
             <p className="about-desc mb-3">
-              Com ampla formação e especialização em Harmonização Facial, a Dra. Sabrina dedica-se a 
-              entender e realçar a beleza única de cada paciente. Com anos de experiência e constante 
+              Com ampla formação e especialização em Harmonização Facial, a Dra. Sabrina dedica-se a
+              entender e realçar a beleza única de cada paciente. Com anos de experiência e constante
               atualização técnica, ela acredita que a verdadeira harmonia vem de um cuidado meticuloso e personalizado.
             </p>
-            <button className="btn-primary about-btn">CONHEÇA A TRAJETÓRIA COMPLETA</button>
+            <button className="btn-primary about-btn">
+              Falar com a especialista <ArrowRight size={18} className="btn-arrow" />
+            </button>
           </div>
         </div>
       </div>

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { ArrowRight } from 'lucide-react';
 import './FAQ.css';
 
 const FAQ = ({ onOpenModal }) => {
@@ -33,7 +34,7 @@ const FAQ = ({ onOpenModal }) => {
     <section className="faq-section section-padding">
       <div className="container">
         <h2 className="section-title text-center title-glow mb-2">PERGUNTAS FREQUENTES</h2>
-        <p className="section-subtitle text-center mb-5">
+        <p className="section-subtitle text-center faq-subtitle mb-5">
           Tire suas principais dúvidas sobre nossos procedimentos e atendimento.
         </p>
 
@@ -57,8 +58,8 @@ const FAQ = ({ onOpenModal }) => {
 
         <div className="section-cta text-center mt-5">
           <button onClick={onOpenModal} className="btn-gold cta-button">
-            MINHAS DÚVIDAS ESTÃO RESPONDIDAS, QUERO AGENDAR
-            <span className="btn-arrow">→</span>
+            Minhas dúvidas estão respondidas, quero agendar
+            <ArrowRight size={20} className="btn-arrow" />
           </button>
         </div>
       </div>

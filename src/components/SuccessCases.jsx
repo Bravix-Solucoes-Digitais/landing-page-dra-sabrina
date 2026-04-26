@@ -1,4 +1,5 @@
 import React from 'react';
+import { ArrowRight } from 'lucide-react';
 import './SuccessCases.css';
 
 const SuccessCases = ({ onOpenModal }) => {
@@ -57,8 +58,8 @@ const SuccessCases = ({ onOpenModal }) => {
 
         <div className="section-cta text-center mt-5">
           <button onClick={onOpenModal} className="btn-gold cta-button">
-            QUERO UM RESULTADO COMO ESSES
-            <span className="btn-arrow">→</span>
+            Quero um resultado como esses
+            <ArrowRight size={20} className="btn-arrow" />
           </button>
         </div>
       </div>

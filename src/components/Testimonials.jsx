@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { Star, ChevronLeft, ChevronRight } from 'lucide-react';
+import { Star, ChevronLeft, ChevronRight, ArrowRight } from 'lucide-react';
 import './Testimonials.css';
 
 const Testimonials = ({ onOpenModal }) => {
@@ -8,31 +8,31 @@ const Testimonials = ({ onOpenModal }) => {
       name: "Ana Carolina R.",
       role: "Professora, 36 anos",
       text: "A Dra. Sabrina tem um cuidado único com cada paciente. Fiz o preenchimento labial e o resultado ficou incrivelmente natural. Pela primeira vez me senti completamente eu mesma, mas em uma versão melhorada. Recomendo de olhos fechados!",
-      avatar: "https://i.pravatar.cc/160?img=47"
+      avatar: "/images/avatar_gold.png"
     },
     {
       name: "Fernanda Souza",
       role: "Empresária, 43 anos",
       text: "Tinha muito medo de fazer qualquer procedimento estético, mas a Dra. Sabrina me explicou tudo com paciência e profissionalismo. O resultado do bioestimulador superou todas as minhas expectativas — minha pele está renovada.",
-      avatar: "https://i.pravatar.cc/160?img=45"
+      avatar: "/images/avatar_gold.png"
     },
     {
       name: "Juliana Martins",
       role: "Designer, 29 anos",
       text: "Fiz o botox e o contorno mandibular e ficou perfeito! A Dra. Sabrina tem uma habilidade técnica incrível e um olhar artístico para cada rosto. Me sinto muito mais confiante no meu dia a dia.",
-      avatar: "https://i.pravatar.cc/160?img=9"
+      avatar: "/images/avatar_gold.png"
     },
     {
       name: "Mariana Lima",
       role: "Advogada, 38 anos",
       text: "Experiência incrível do início ao fim. O atendimento é personalizado, o ambiente é acolhedor e os resultados são impressionantes. Fiz a harmonização facial completa e recebo elogios todos os dias. Valeu cada centavo!",
-      avatar: "https://i.pravatar.cc/160?img=44"
+      avatar: "/images/avatar_gold.png"
     },
     {
       name: "Camila Rodrigues",
       role: "Nutricionista, 31 anos",
       text: "Sempre tive insegurança com meu perfil, especialmente o nariz. A Dra. Sabrina fez a rinoplastia não-cirúrgica e o resultado foi transformador e completamente natural. Me devolveu a autoestima que eu precisava!",
-      avatar: "https://i.pravatar.cc/160?img=41"
+      avatar: "/images/avatar_gold.png"
     }
   ];
 
@@ -151,8 +151,8 @@ const Testimonials = ({ onOpenModal }) => {
 
         <div className="section-cta text-center mt-5">
           <button onClick={onOpenModal} className="btn-gold cta-button">
-            QUERO VIVER ESSA EXPERIÊNCIA
-            <span className="btn-arrow">→</span>
+            Quero viver essa experiência
+            <ArrowRight size={20} className="btn-arrow" />
           </button>
         </div>
       </div>

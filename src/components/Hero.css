@@ -70,7 +70,6 @@
 }
 .hero-title-line1 {
   font-family: var(--font-display);
-  font-style: italic;
   font-weight: 400;
   font-size: 2.2rem;
   color: var(--text-main);
@@ -79,7 +78,6 @@
 }
 .hero-title-accent {
   font-family: var(--font-display);
-  font-style: italic;
   font-weight: 700;
   font-size: 4.5rem;
   line-height: 1;
@@ -92,7 +90,6 @@
 }
 .hero-title-line2 {
   font-family: var(--font-display);
-  font-style: italic;
   font-weight: 400;
   font-size: 3rem;
   color: var(--text-main);

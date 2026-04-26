@@ -1,24 +1,12 @@
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
-import Hero from './components/Hero'
-import Services from './components/Services'
-import Benefits from './components/Benefits'
-import SuccessCases from './components/SuccessCases'
-import Testimonials from './components/Testimonials'
-import About from './components/About'
-import FAQ from './components/FAQ'
-import Footer from './components/Footer'
-import WhatsAppButton from './components/WhatsAppButton'
+import Home from './pages/Home'
+import ServiceDetail from './pages/ServiceDetail'
 import ContactModal from './components/ContactModal'
+import ScrollToTop from './components/ScrollToTop'
 
 import './App.css'
-
-/* ── Separador ornamental dourado ── */
-const GoldDivider = () => (
-  <div className="gold-divider" aria-hidden="true">
-    <span className="gold-divider-icon">✦</span>
-  </div>
-);
 
 function App() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -32,78 +20,18 @@ function App() {
     setIsModalOpen(false);
   };
 
-  useEffect(() => {
-    // Scroll Reveal — IntersectionObserver
-    const observerOptions = {
-      root: null,
-      rootMargin: '0px',
-      threshold: 0.12
-    };
-
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-          entry.target.classList.add('active');
-        }
-      });
-    }, observerOptions);
-
-    const elementsToAnimate = document.querySelectorAll(
-      '.hero-title, .hero-description, .hero-form-wrap, .section-title, .service-card, .benefit-card, .case-card, .testimonial-card, .faq-item, .about-content'
-    );
-
-    elementsToAnimate.forEach((el, index) => {
-      el.classList.add('reveal');
-      if (el.className.includes('card') || el.className.includes('item')) {
-        el.style.transitionDelay = `${(index % 3) * 0.1}s`;
-      }
-      observer.observe(el);
-    });
-
-    // Segurança: Força a exibição após 2.5s caso algo trave
-    const safetyTimeout = setTimeout(() => {
-      elementsToAnimate.forEach(el => el.classList.add('active'));
-    }, 2500);
-
-    return () => {
-      observer.disconnect();
-      clearTimeout(safetyTimeout);
-    };
-  }, []);
-
   return (
-    <div className="app-container">
-      {/* Hero — fundo escuro principal */}
-      <Hero onOpenModal={handleOpenModal} />
+    <Router>
+      <ScrollToTop />
+      <div className="app-container">
+        <Routes>
+          <Route path="/" element={<Home onOpenModal={handleOpenModal} />} />
+          <Route path="/servico/:id" element={<ServiceDetail onOpenModal={handleOpenModal} />} />
+        </Routes>
 
-      {/* Serviços — fundo vinho escuro (bg-alt) */}
-      <GoldDivider />
-      <Services />
-
-      {/* Benefícios — fundo principal */}
-      <GoldDivider />
-      <Benefits />
-
-      {/* Cases — fundo vinho escuro */}
-      <GoldDivider />
-      <SuccessCases onOpenModal={handleOpenModal} />
-
-      {/* Depoimentos — fundo alt */}
-      <GoldDivider />
-      <Testimonials onOpenModal={handleOpenModal} />
-
-      {/* Sobre */}
-      <GoldDivider />
-      <About />
-
-      {/* FAQ — fundo principal */}
-      <GoldDivider />
-      <FAQ onOpenModal={handleOpenModal} />
-
-      <Footer />
-      <WhatsAppButton />
-      <ContactModal isOpen={isModalOpen} onClose={handleCloseModal} />
-    </div>
+        <ContactModal isOpen={isModalOpen} onClose={handleCloseModal} />
+      </div>
+    </Router>
   )
 }
 

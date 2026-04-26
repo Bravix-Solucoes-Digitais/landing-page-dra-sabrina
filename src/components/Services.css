@@ -11,20 +11,26 @@
 /* ── Grid ─────────────────────────── */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2.5rem;
+}
+
+.service-card-link {
+  text-decoration: none;
+  display: block;
 }
 
 /* ── Card ─────────────────────────── */
 .service-card {
-  background-color: var(--bg-card);
-  border: var(--gold-border);
+  background: var(--bg-secondary);
+  border: 1px solid rgba(195, 163, 95, 0.1);
   border-radius: var(--border-radius-lg);
   overflow: hidden;
-  transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
-  cursor: pointer;
+  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 .service-card:hover {

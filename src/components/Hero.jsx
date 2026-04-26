@@ -1,4 +1,5 @@
 import React from 'react';
+import { ArrowRight } from 'lucide-react';
 import './Hero.css';
 
 const Hero = ({ onOpenModal }) => {
@@ -26,8 +27,8 @@ const Hero = ({ onOpenModal }) => {
           <div className="hero-form-wrap">
             <div className="hero-form-divider"></div>
             <button onClick={onOpenModal} className="btn-gold hero-btn">
-              QUERO MINHA CONSULTA GRATUITA
-              <span className="btn-arrow">→</span>
+              Quero minha consulta gratuita
+              <ArrowRight size={20} className="btn-arrow" />
             </button>
             <p className="hero-promo">✦ Avaliação personalizada sem compromisso</p>
           </div>

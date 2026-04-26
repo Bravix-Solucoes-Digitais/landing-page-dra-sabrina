@@ -28,7 +28,7 @@ const Benefits = () => {
         <p className="section-subtitle text-center mb-5">Por que escolher o cuidado exclusivo da Dra. Sabrina.</p>
         <div className="benefits-grid">
           {benefits.map((benefit, index) => (
-            <div key={index} className="benefit-card gold-glow">
+            <div key={index} className="benefit-card">
               <div className="benefit-icon-wrap mb-2">
                 {benefit.icon}
               </div>

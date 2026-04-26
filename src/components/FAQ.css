@@ -1,6 +1,16 @@
 .faq-section {
   background-color: var(--bg-main);
 }
+ 
+.faq-subtitle {
+  text-transform: none !important;
+  letter-spacing: normal !important;
+  font-size: 1rem !important;
+  color: var(--text-main) !important;
+  font-weight: 500 !important;
+  opacity: 1 !important;
+  max-width: 700px;
+}
 
 .faq-list {
   max-width: 760px;

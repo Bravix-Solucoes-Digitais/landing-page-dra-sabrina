@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { X } from 'lucide-react';
+import { X, ArrowRight } from 'lucide-react';
 import './ContactModal.css';
 
 const ContactModal = ({ isOpen, onClose }) => {
@@ -46,7 +46,7 @@ const ContactModal = ({ isOpen, onClose }) => {
     // Formata a mensagem para o WhatsApp
     const message = `Olá, acabei de preencher o formulário no site e gostaria de confirmar meu interesse no procedimento: ${formData.service}. \n\nNome: ${formData.name}\nWhatsApp: ${formData.phone}\nE-mail: ${formData.email}`;
     const encodedMessage = encodeURIComponent(message);
-    const whatsappUrl = `https://wa.me/5511999999999?text=${encodedMessage}`; // Substituir pelo número real se necessário
+    const whatsappUrl = `https://wa.me/554830522922?text=${encodedMessage}`;
     
     // Simula envio e redireciona
     console.log('Formulário enviado:', formData);
@@ -128,8 +128,8 @@ const ContactModal = ({ isOpen, onClose }) => {
           </div>
 
           <button type="submit" className="btn-gold modal-submit">
-            SOLICITAR AGENDAMENTO
-            <span className="btn-arrow">→</span>
+            Solicitar agendamento
+            <ArrowRight size={20} className="btn-arrow" />
           </button>
         </form>
 
