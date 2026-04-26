@@ -1,7 +1,7 @@
 import React from 'react';
 import './Hero.css';
 
-const Hero = () => {
+const Hero = ({ onOpenModal }) => {
   return (
     <section className="hero-section">
       <div className="container hero-container">
@@ -15,7 +15,7 @@ const Hero = () => {
           </h1>
 
           <div className="hero-image-main">
-            <img src="/images/hero_mobile_v5.jpg" alt="Dra. Sabrina Almeida" className="hero-main-img" />
+            <img src="/images/hero_mobile_v6.jpg" alt="Dra. Sabrina Almeida" className="hero-main-img" />
           </div>
 
           <p className="hero-description">
@@ -25,14 +25,10 @@ const Hero = () => {
 
           <div className="hero-form-wrap">
             <div className="hero-form-divider"></div>
-            <form className="hero-form" onSubmit={(e) => e.preventDefault()}>
-              <input type="text" placeholder="Nome Completo" className="hero-input" />
-              <input type="tel" placeholder="Seu WhatsApp com DDD" className="hero-input" />
-              <button type="submit" className="btn-gold hero-btn">
-                QUERO MINHA CONSULTA GRATUITA
-                <span className="btn-arrow">→</span>
-              </button>
-            </form>
+            <button onClick={onOpenModal} className="btn-gold hero-btn">
+              QUERO MINHA CONSULTA GRATUITA
+              <span className="btn-arrow">→</span>
+            </button>
             <p className="hero-promo">✦ Avaliação personalizada sem compromisso</p>
           </div>
 

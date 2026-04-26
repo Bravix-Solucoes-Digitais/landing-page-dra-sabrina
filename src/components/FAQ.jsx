@@ -1,40 +1,40 @@
 import React, { useState } from 'react';
 import './FAQ.css';
 
-const FAQ = () => {
-  const [openFaq, setOpenFaq] = useState(0);
+const FAQ = ({ onOpenModal }) => {
+  const [openFaq, setOpenFaq] = useState(null);
 
   const faqs = [
     {
-      q: "Os procedimentos causam dor?",
-      a: "A maioria dos procedimentos é realizada com anestesia tópica ou bloqueio local, garantindo máximo conforto durante toda a sessão. A sensação é mínima e bem tolerada pela grande maioria das pacientes."
+      q: "A Dra. Sabrina atende por convênio?",
+      a: "Nossos atendimentos são exclusivamente particulares, o que nos permite oferecer um tempo de consulta estendido, materiais de primeiríssima linha e um plano de tratamento totalmente personalizado para cada paciente."
     },
     {
-      q: "Quanto tempo duram os resultados?",
-      a: "Depende do procedimento: o preenchimento com ácido hialurônico dura de 8 a 18 meses, a toxina botulínica de 4 a 6 meses, e os bioestimuladores de colágeno podem durar até 2 anos. Cada caso é avaliado individualmente."
+      q: "Quanto tempo dura o efeito dos procedimentos?",
+      a: "Isso varia conforme o procedimento. O Botox costuma durar de 4 a 6 meses. Já os preenchimentos com ácido hialurônico e bioestimuladores podem durar de 12 a 24 meses, dependendo do metabolismo de cada organismo."
     },
     {
-      q: "O resultado fica natural?",
-      a: "Sim. Nossa filosofia é o 'natural-glam': realçar a beleza que já existe em você, nunca transformar. A Dra. Sabrina prioriza resultados sutis, harmoniosos e totalmente personalizados para os seus traços."
+      q: "Os procedimentos são doloridos?",
+      a: "Prezamos pelo seu conforto total. Utilizamos as melhores técnicas anestésicas (tópicas e injetáveis) para garantir que sua experiência seja o mais tranquila e indolor possível."
     },
     {
-      q: "Posso retomar minhas atividades logo após?",
-      a: "Na maioria dos procedimentos, sim. Pode haver pequeno inchaço ou hematoma por 24–48 horas, mas sem impedimento para atividades cotidianas. Orientações específicas são fornecidas na consulta."
+      q: "Preciso de repouso após a aplicação?",
+      a: "A maioria dos procedimentos permite que você retorne às suas atividades no mesmo dia. Recomendamos apenas evitar exercícios físicos intensos e exposição direta ao sol nas primeiras 24 a 48 horas."
     },
     {
-      q: "Como é feita a avaliação inicial?",
-      a: "A consulta é totalmente personalizada. A Dra. Sabrina analisa suas características faciais, histórico clínico e objetivos para criar um plano de tratamento exclusivo para você — sem pressão ou compromisso."
+      q: "Onde o consultório está localizado?",
+      a: "Estamos localizados em uma área nobre e de fácil acesso, com estacionamento privativo e total discrição para nossas pacientes. O endereço exato é enviado no momento do agendamento."
     }
   ];
 
-  const toggle = (idx) => setOpenFaq(openFaq === idx ? -1 : idx);
+  const toggle = (idx) => setOpenFaq(openFaq === idx ? null : idx);
 
   return (
     <section className="faq-section section-padding">
       <div className="container">
         <h2 className="section-title text-center title-glow mb-2">PERGUNTAS FREQUENTES</h2>
         <p className="section-subtitle text-center mb-5">
-          Esclareça suas principais dúvidas sobre nossos procedimentos.
+          Tire suas principais dúvidas sobre nossos procedimentos e atendimento.
         </p>
 
         <div className="faq-list">
@@ -53,6 +53,13 @@ const FAQ = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="section-cta text-center mt-5">
+          <button onClick={onOpenModal} className="btn-gold cta-button">
+            MINHAS DÚVIDAS ESTÃO RESPONDIDAS, QUERO AGENDAR
+            <span className="btn-arrow">→</span>
+          </button>
         </div>
       </div>
     </section>

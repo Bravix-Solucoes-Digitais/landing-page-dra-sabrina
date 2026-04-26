@@ -1,7 +1,7 @@
 import React from 'react';
 import './SuccessCases.css';
 
-const SuccessCases = () => {
+const SuccessCases = ({ onOpenModal }) => {
   const cases = [
     {
       image: "/images/case_transformacao_1.jpg",
@@ -53,6 +53,13 @@ const SuccessCases = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="section-cta text-center mt-5">
+          <button onClick={onOpenModal} className="btn-gold cta-button">
+            QUERO UM RESULTADO COMO ESSES
+            <span className="btn-arrow">→</span>
+          </button>
         </div>
       </div>
     </section>

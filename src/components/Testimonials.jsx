@@ -2,7 +2,7 @@ import React, { useState, useEffect, useCallback } from 'react';
 import { Star, ChevronLeft, ChevronRight } from 'lucide-react';
 import './Testimonials.css';
 
-const Testimonials = () => {
+const Testimonials = ({ onOpenModal }) => {
   const testimonials = [
     {
       name: "Ana Carolina R.",
@@ -147,6 +147,13 @@ const Testimonials = () => {
               </div>
             </div>
           ))}
+        </div>
+
+        <div className="section-cta text-center mt-5">
+          <button onClick={onOpenModal} className="btn-gold cta-button">
+            QUERO VIVER ESSA EXPERIÊNCIA
+            <span className="btn-arrow">→</span>
+          </button>
         </div>
       </div>
     </section>

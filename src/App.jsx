@@ -1,4 +1,4 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 import Hero from './components/Hero'
 import Services from './components/Services'
@@ -8,6 +8,8 @@ import Testimonials from './components/Testimonials'
 import About from './components/About'
 import FAQ from './components/FAQ'
 import Footer from './components/Footer'
+import WhatsAppButton from './components/WhatsAppButton'
+import ContactModal from './components/ContactModal'
 
 import './App.css'
 
@@ -19,6 +21,17 @@ const GoldDivider = () => (
 );
 
 function App() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const handleOpenModal = (e) => {
+    if (e) e.preventDefault();
+    setIsModalOpen(true);
+  };
+
+  const handleCloseModal = () => {
+    setIsModalOpen(false);
+  };
+
   useEffect(() => {
     // Scroll Reveal — IntersectionObserver
     const observerOptions = {
@@ -61,7 +74,7 @@ function App() {
   return (
     <div className="app-container">
       {/* Hero — fundo escuro principal */}
-      <Hero />
+      <Hero onOpenModal={handleOpenModal} />
 
       {/* Serviços — fundo vinho escuro (bg-alt) */}
       <GoldDivider />
@@ -73,11 +86,11 @@ function App() {
 
       {/* Cases — fundo vinho escuro */}
       <GoldDivider />
-      <SuccessCases />
+      <SuccessCases onOpenModal={handleOpenModal} />
 
       {/* Depoimentos — fundo alt */}
       <GoldDivider />
-      <Testimonials />
+      <Testimonials onOpenModal={handleOpenModal} />
 
       {/* Sobre */}
       <GoldDivider />
@@ -85,9 +98,11 @@ function App() {
 
       {/* FAQ — fundo principal */}
       <GoldDivider />
-      <FAQ />
+      <FAQ onOpenModal={handleOpenModal} />
 
       <Footer />
+      <WhatsAppButton />
+      <ContactModal isOpen={isModalOpen} onClose={handleCloseModal} />
     </div>
   )
 }
