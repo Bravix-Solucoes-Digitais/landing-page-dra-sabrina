@@ -35,7 +35,7 @@ const Services = () => {
       title: "HARMONIZAÇÃO FACIAL",
       description: "Equilíbrio e proporção para realçar seus melhores traços com sutileza.",
       detail: "Análise Estética",
-      image: "/images/hero_bg_desktop.jpg"
+      image: "/services/harmonizacao.png"
     },
     {
       id: "rinoplastia",
