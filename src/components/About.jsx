@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react'; // Imagem atualizada e trigger de deploy
 import './About.css';
 
 const About = () => {
