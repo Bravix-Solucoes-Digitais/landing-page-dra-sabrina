@@ -47,7 +47,11 @@ const Services = () => {
                 <div className="service-icon-wrap">
                   {service.icon}
                 </div>
-                <h3 className="service-title">{service.title}</h3>
+                <div className="service-info">
+                  <h3 className="service-title">{service.title}</h3>
+                </div>
+              </div>
+              <div className="service-footer">
                 <span className="service-detail">{service.detail}</span>
               </div>
             </div>

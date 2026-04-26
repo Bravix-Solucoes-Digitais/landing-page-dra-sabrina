@@ -23,6 +23,8 @@
   overflow: hidden;
   transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
 }
 
 .service-card:hover {
@@ -94,6 +96,7 @@
   display: flex;
   align-items: center;
   gap: 1rem;
+  flex-grow: 1;
 }
 
 .service-icon-wrap {
@@ -108,21 +111,34 @@
   flex-shrink: 0;
 }
 
+.service-info {
+  flex: 1;
+}
+
 .service-title {
   font-family: var(--font-serif);
-  font-size: 0.82rem;
+  font-size: 0.85rem;
   letter-spacing: 1.5px;
   color: var(--text-main);
-  margin-bottom: 0.2rem;
+  margin-bottom: 0;
+  line-height: 1.4;
+}
+
+.service-footer {
+  background: rgba(10, 7, 8, 0.9);
+  padding: 0.6rem 1rem;
+  text-align: center;
+  border-top: 1px solid rgba(195, 163, 95, 0.3);
 }
 
 .service-detail {
   display: block;
-  font-size: 0.7rem;
+  font-size: 0.78rem;
   color: var(--primary-gold);
-  opacity: 0.7;
-  letter-spacing: 1px;
-  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1.5px;
+  text-transform: none;
+  text-shadow: 0 0 10px rgba(195, 163, 95, 0.2);
 }
 
 /* ── Responsivo ───────────────────── */
