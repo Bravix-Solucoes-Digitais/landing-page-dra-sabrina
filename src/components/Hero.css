@@ -51,7 +51,8 @@
   align-items: center;
   gap: 0.75rem;
 }
-.hero-eyebrow::before {
+.hero-eyebrow::before,
+.hero-eyebrow::after {
   content: '';
   display: inline-block;
   width: 32px;

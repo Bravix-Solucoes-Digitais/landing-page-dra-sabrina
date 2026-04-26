@@ -29,7 +29,9 @@ const Footer = () => {
               <li>Av. Marcolino Martins Cabral, 1688</li>
               <li>Centro, Tubarão - SC</li>
               <li>CEP: 88705-000</li>
-              <li className="footer-info-list-item-title">Horários de Atendimento:</li>
+            </ul>
+            <h5 className="footer-info-list-item-title">Horários de Atendimento:</h5>
+            <ul className="footer-info-list">
               <li>07:00 – 12:00</li>
               <li>13:15 – 19:00</li>
             </ul>
@@ -67,8 +69,14 @@ const Footer = () => {
 
         </div>
 
-        <div className="footer-bottom">
+        <div className="footer-copyright-main">
           <p>© {new Date().getFullYear()} Dra. Sabrina Almeida — Todos os direitos reservados.</p>
+        </div>
+
+        <div className="footer-bottom">
+          <p className="footer-dev">
+            Desenvolvido por <a href="https://wa.me/554898617799" target="_blank" rel="noopener noreferrer">Bravix Soluções Digitais</a>
+          </p>
         </div>
       </div>
     </footer>
