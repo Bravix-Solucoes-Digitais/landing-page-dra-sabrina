@@ -15,7 +15,7 @@ const Hero = () => {
           </h1>
 
           <div className="hero-image-main">
-            <img src="/images/media__1776524168521.png" alt="Dra. Sabrina Almeida" className="hero-main-img" />
+            <img src="/images/hero_mobile_v5.jpg" alt="Dra. Sabrina Almeida" className="hero-main-img" />
           </div>
 
           <p className="hero-description">

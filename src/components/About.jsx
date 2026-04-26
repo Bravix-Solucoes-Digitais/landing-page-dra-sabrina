@@ -9,7 +9,7 @@ const About = () => {
         <p className="section-subtitle text-center mb-5">Conheça a trajetória e a paixão por trás de cada transformação.</p>
         <div className="about-content">
           <div className="about-image-wrap">
-            <img src="/images/sabrina_about_1776531213863.png" alt="Dra. Sabrina" className="about-image" />
+            <img src="/images/about_dr_sabrina.jpeg" alt="Dra. Sabrina" className="about-image" />
           </div>
           <div className="about-text-content">
             <h3 className="about-name text-gold mb-2">DRA. SABRINA ALMEIDA</h3>
