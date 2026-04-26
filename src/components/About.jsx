@@ -1,4 +1,4 @@
-import React from 'react'; // Imagem atualizada e trigger de deploy
+import React from 'react'; // Segunda tentativa de trigger do deploy
 import './About.css';
 
 const About = () => {
