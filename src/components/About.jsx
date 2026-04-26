@@ -1,4 +1,4 @@
-import React from 'react'; // Segunda tentativa de trigger do deploy
+import React from 'react'; // Terceira tentativa de trigger do deploy
 import './About.css';
 
 const About = () => {
