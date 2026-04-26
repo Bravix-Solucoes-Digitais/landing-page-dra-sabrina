@@ -7,11 +7,18 @@ const Hero = ({ onOpenModal }) => {
     <section className="hero-section">
       <div className="container hero-container">
         <div className="hero-content animate-fade-in">
+          <div className="hero-badge animate-fade-in">
+            <span className="badge-icon">✦</span>
+            <span className="badge-text">Dra. Sabrina Almeida</span>
+          </div>
+
           <p className="hero-eyebrow">HARMONIZAÇÃO FACIAL</p>
 
           <h1 className="hero-title">
             <span className="hero-title-line1">Descubra sua</span>
-            <span className="hero-title-accent">Beleza</span>
+            <div className="hero-title-glow-wrap">
+              <span className="hero-title-accent">Beleza</span>
+            </div>
             <span className="hero-title-line2">Autêntica</span>
           </h1>
 

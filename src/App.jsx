@@ -5,6 +5,7 @@ import Home from './pages/Home'
 import ServiceDetail from './pages/ServiceDetail'
 import ContactModal from './components/ContactModal'
 import ScrollToTop from './components/ScrollToTop'
+import ScrollTopButton from './components/ScrollTopButton'
 
 import './App.css'
 
@@ -30,6 +31,7 @@ function App() {
         </Routes>
 
         <ContactModal isOpen={isModalOpen} onClose={handleCloseModal} />
+        <ScrollTopButton />
       </div>
     </Router>
   )

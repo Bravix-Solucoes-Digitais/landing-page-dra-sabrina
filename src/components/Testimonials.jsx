@@ -49,11 +49,24 @@ const Testimonials = ({ onOpenModal }) => {
   const prev = () => goTo((current - 1 + testimonials.length) % testimonials.length);
   const next = useCallback(() => goTo((current + 1) % testimonials.length), [current, goTo, testimonials.length]);
 
-  // Autoplay a cada 5s
+  // Autoplay a cada 4s
   useEffect(() => {
-    const timer = setInterval(next, 5000);
+    const timer = setInterval(next, 4000);
     return () => clearInterval(timer);
   }, [next]);
+
+  // Ref para o track mobile para permitir scroll automático
+  const mobileTrackRef = React.useRef(null);
+
+  useEffect(() => {
+    if (mobileTrackRef.current) {
+      const cardWidth = mobileTrackRef.current.offsetWidth * 0.85; // Aproximadamente o tamanho de um card
+      mobileTrackRef.current.scrollTo({
+        left: current * (cardWidth + 20), // 20 é o gap
+        behavior: 'smooth'
+      });
+    }
+  }, [current]);
 
   // Índices dos 3 cards visíveis (centrado no atual)
   const getVisible = () => {
@@ -128,7 +141,7 @@ const Testimonials = ({ onOpenModal }) => {
         </div>
 
         {/* --- CARROSSEL MOBILE (Visível apenas no mobile) --- */}
-        <div className="mobile-carousel-track mobile-only">
+        <div className="mobile-carousel-track mobile-only" ref={mobileTrackRef}>
           {testimonials.map((t, idx) => (
             <div key={idx} className="testimonial-card gold-glow testimonial-card--mobile">
               <div className="testimonial-quote-mark">"</div>

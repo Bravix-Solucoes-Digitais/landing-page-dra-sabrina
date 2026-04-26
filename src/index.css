@@ -85,6 +85,16 @@ a {
 @media (max-width: 600px) {
   .container { padding: 0 1.25rem; }
   h2.section-title { font-size: 1.6rem !important; letter-spacing: 1px; }
+  
+  .btn-gold {
+    padding: 1rem 1.8rem;
+    font-size: 0.85rem;
+  }
+  
+  .btn-primary {
+    padding: 0.9rem 1.6rem;
+    font-size: 0.85rem;
+  }
 }
 
 /* ─── Separador Dourado Ornamental ───────── */
