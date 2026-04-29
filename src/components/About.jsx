@@ -13,7 +13,7 @@ const About = () => {
             <img src="/images/about_dr_sabrina.jpeg" alt="Dra. Sabrina" className="about-image" />
           </div>
           <div className="about-text-content">
-            <h3 className="about-name text-gold mb-2">DRA. SABRINA ALMEIDA</h3>
+            <h3 className="about-name text-gold mb-2">DRA. SABRINA PEIXOTO</h3>
             <p className="about-desc mb-3">
               Com ampla formação e especialização em Harmonização Facial, a Dra. Sabrina dedica-se a
               entender e realçar a beleza única de cada paciente. Com anos de experiência e constante

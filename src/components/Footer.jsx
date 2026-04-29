@@ -13,7 +13,7 @@ const Footer = () => {
             <div className="footer-logo">
               <span className="logo-icon">S</span>
               <div className="logo-text">
-                <h4>SABRINA ALMEIDA</h4>
+                <h4>SABRINA PEIXOTO</h4>
                 <span className="logo-sub">ESTÉTICA AVANÇADA</span>
               </div>
             </div>
@@ -70,7 +70,7 @@ const Footer = () => {
         </div>
 
         <div className="footer-copyright-main">
-          <p>© {new Date().getFullYear()} Dra. Sabrina Almeida — Todos os direitos reservados.</p>
+          <p>© {new Date().getFullYear()} Dra. Sabrina Peixoto — Todos os direitos reservados.</p>
         </div>
 
         <div className="footer-bottom">

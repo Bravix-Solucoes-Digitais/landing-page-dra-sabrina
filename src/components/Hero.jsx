@@ -9,7 +9,7 @@ const Hero = ({ onOpenModal }) => {
         <div className="hero-content animate-fade-in">
           <div className="hero-badge animate-fade-in">
             <span className="badge-icon">✦</span>
-            <span className="badge-text">Dra. Sabrina Almeida</span>
+            <span className="badge-text">Dra. Sabrina Peixoto</span>
           </div>
 
           <p className="hero-eyebrow">HARMONIZAÇÃO FACIAL</p>
@@ -23,12 +23,12 @@ const Hero = ({ onOpenModal }) => {
           </h1>
 
           <div className="hero-image-main">
-            <img src="/images/hero_mobile_v6.jpg" alt="Dra. Sabrina Almeida" className="hero-main-img" />
+            <img src="/images/hero_mobile_v6.jpg" alt="Dra. Sabrina Peixoto" className="hero-main-img" />
           </div>
 
           <p className="hero-description">
             Procedimentos personalizados e seguros para realçar seus traços únicos,
-            com o cuidado especializado da Dra. Sabrina Almeida.
+            com o cuidado especializado da Dra. Sabrina Peixoto.
           </p>
 
           <div className="hero-form-wrap">
