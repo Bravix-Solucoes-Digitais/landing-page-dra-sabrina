@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Droplets, Syringe, Sparkles, User, Scissors } from 'lucide-react';
+import { Droplets, Syringe, Sparkles, User, Scissors, Wand2 } from 'lucide-react';
 import './Services.css';
 
 const Services = () => {
@@ -43,7 +43,15 @@ const Services = () => {
       title: "RINOMODELAÇÃO",
       description: "Correções sutis no nariz sem a necessidade de cirurgia invasiva.",
       detail: "Rinomodelação",
-      image: "/services/preenchimento.png"
+      image: "/services/rinoplastia.png"
+    },
+    {
+      id: "fios-pdo",
+      icon: <Wand2 size={28} className="gold-icon" />,
+      title: "FIOS DE PDO",
+      description: "Lifting facial sem cirurgia com fios biocompatíveis. Reposicione e firme os tecidos com resultado imediato e progressivo.",
+      detail: "Lifting Sem Cirurgia",
+      image: "/services/fios-pdo.png"
     }
   ];
 

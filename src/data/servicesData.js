@@ -68,7 +68,7 @@ export const servicesData = {
     ],
     duration: "Depende da combinação de procedimentos",
     recovery: "Geralmente 3 a 5 dias para resultados estabilizarem.",
-    image: "/images/hero_bg_desktop.jpg", // Placeholder elegante
+    image: "/services/harmonizacao.png",
     detail: "Análise Estética"
   },
   "rinoplastia": {
@@ -86,7 +86,25 @@ export const servicesData = {
     ],
     duration: "Aproximadamente 45 minutos",
     recovery: "Retorno imediato, evitando pressão no local por 7 dias.",
-    image: "/services/preenchimento.png", // Placeholder
+    image: "/services/rinoplastia.png", // Placeholder
     detail: "Rinomodelação"
+  },
+  "fios-pdo": {
+    id: "fios-pdo",
+    title: "FIOS DE PDO",
+    shortTitle: "Fios de PDO",
+    description: "Lifting facial sem cirurgia com fios biocompatíveis. Reposicione e firme os tecidos com resultado imediato e progressivo.",
+    fullDescription: "Os Fios de PDO (Polidioxanona) são uma técnica minimamente invasiva que promove o lifting e a sustentação dos tecidos faciais sem necessidade de cirurgia. Os fios são inseridos sob a pele, reposicionando imediatamente as estruturas e estimulando a produção de colágeno ao longo dos meses.",
+    benefits: [
+      "Lifting imediato do rosto e pescoço",
+      "Definição do contorno mandibular",
+      "Estimulação natural de colágeno",
+      "Melhora da flacidez em regiões específicas",
+      "Procedimento rápido e sem internação"
+    ],
+    duration: "Aproximadamente 60 minutos",
+    recovery: "Leve edema nos primeiros dias. Retorno às atividades em 24 a 48h.",
+    image: "/services/fios-pdo.png",
+    detail: "Lifting Sem Cirurgia"
   }
 };
